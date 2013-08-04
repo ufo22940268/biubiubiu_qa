@@ -1,0 +1,22 @@
+.tag {
+    border-width:1px;
+    border-color: #fff;
+    background-color:#E0EAF1
+}
+
+.user-tag-icon {
+    margin-left: 6px;
+    margin-top: 3px;
+}
+
+.question-summary {
+}
+
+.summary-counter {
+    text-align: center;
+    padding: 1em 1em 1em 0em;
+}
+
+.summery-second-line {
+    margin-top: 20px;
+}

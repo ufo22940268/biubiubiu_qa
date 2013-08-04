@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" media="screen">
+        <link href="{{ url_for('static', filename='css/bootstrap-glyphicons.css') }}" rel="stylesheet" media="screen">
+        <link href="{{ url_for('static', filename='css/ask_question.css') }}" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        {% include "nav_ask_question.html" %}
+        <h1>Ask question</h1>
+        <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    </body>
+</html>

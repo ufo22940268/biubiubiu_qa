@@ -1,0 +1,19 @@
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">Biubiubiu Q&A</a>
+        <ul class="nav navbar-nav">
+            <li class="{% block questions %}{% endblock %}"><a href="">Questions</a></li>
+            <li class="{% block ask_question %}{% endblock %}"><a href="">Ask Questions{% block test %} {% endblock %}</a></li>
+        </ul>
+
+        <!-- Place everything within .navbar-collapse to hide it until above 768px -->
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</div><!-- /.navbar -->
