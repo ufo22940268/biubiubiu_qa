@@ -5,12 +5,58 @@
         <!-- Bootstrap -->
         <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" media="screen">
         <link href="{{ url_for('static', filename='css/bootstrap-glyphicons.css') }}" rel="stylesheet" media="screen">
-        <link href="{{ url_for('static', filename='css/ask_question.css') }}" rel="stylesheet" media="screen">
+        <link href="{{ url_for('static', filename='ask_question.css') }}" rel="stylesheet" media="screen">
     </head>
     <body>
         {% include "nav_ask_question.html" %}
-        <h1>Ask question</h1>
+        <div class="container">
+            <div class="row">
+                <div id="left-editor-container" class="col-lg-7">
+                    <div class="row">
+                        <strong class="col-lg-1" style="margin-top: 4px; padding-left: 0px;">Title</strong>
+                        <input id="title" type="text" class="col-lg-11" />
+                    </div>
+                    <div class="row">
+                        <div id="epiceditor" style="margin-top: 20px; height: 250px"></div>
+                    </div>
+
+                    <div class="row" style="margin-top: 20px">
+                        <strong>Tags</strong>
+                    </div>
+
+                    <div class="row">
+                        <input id="tags" class="col-lg-12" type="" placeholder="At least one tag such as django, java, python. Split tags with comma" />
+                    </div>
+
+                    <div class="row new-entry">
+                        <button id="btn-post" class="btn btn-default"><strong>Post Your Question</strong></button>
+                    </div>
+                </div>
+
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+
+        <div id="alert-tags" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Attention</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tags entry can't be null</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
         <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
         <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/epiceditor.js') }}"></script>
+        <script src="{{ url_for('static', filename='ask_question.js') }}"></script>
     </body>
 </html>
